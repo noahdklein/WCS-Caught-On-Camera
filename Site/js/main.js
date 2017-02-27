@@ -555,7 +555,11 @@ $(function(){
         var errorBlock = $("#error");
         var email = $("#cons_email").val();
         getCookie(name);
+<<<<<<< HEAD
         var surveyID = $("#surveyID").val();
+=======
+        // var surveyID = $("#surveyID").val();
+>>>>>>> 698f99e655f1200f8426c06d399395010e9abb77
        
             if (!isValidEmail(email)) {
                 errorBlock.html("Please enter a Valid email address to continue");

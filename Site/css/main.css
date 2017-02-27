@@ -411,7 +411,6 @@ footer .menu_policy{
   background-color: rgba(0,0,0,0.8);
 }
 .slideshow-container-unlocked {
-  max-width: 800px;
   position: relative;
   margin: auto;
   padding-bottom: 5%;
@@ -533,6 +532,10 @@ footer .menu_policy{
 }
 #map-container{
   height: 40%;
+}
+.content-cards p {
+  width: 65%;
+  margin: auto;
 }
 #map{
     height: inherit;

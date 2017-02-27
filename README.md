@@ -1,1 +1,0 @@
-# WCS-Caught-On-Camera

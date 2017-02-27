@@ -360,28 +360,28 @@ function initMap(){
 ]
 	});
     var image1 = {
-        url: 'http://staging.nycinspires.org/img/ICON_OPEN_inactive.png',
+        url: 'http://pages.wcs.org/caughtoncamera/img/ICON_OPEN_inactive.png',
         size: new google.maps.Size(58, 58),
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(17, 34),
         scaledSize: new google.maps.Size(40, 40)
         };
     var image2 = {
-        url: 'http://staging.nycinspires.org/img/ICON_OPEN_active.png',
+        url: 'http://pages.wcs.org/caughtoncamera/img/ICON_OPEN_active.png',
         size: new google.maps.Size(58, 58),
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(17, 34),
         scaledSize: new google.maps.Size(40, 40)
         };
     var image3 = {
-        url: 'http://staging.nycinspires.org/img/ICON_LOCK_inactive.png',
+        url: 'http://pages.wcs.org/caughtoncamera/img/ICON_LOCK_inactive.png',
         size: new google.maps.Size(58, 58),
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(17, 34),
         scaledSize: new google.maps.Size(40, 40)
         };
     var image4 = {
-        url: 'http://staging.nycinspires.org/img/ICON_LOCK_active.png',
+        url: 'http://pages.wcs.org/caughtoncamera/img/ICON_LOCK_active.png',
         size: new google.maps.Size(58, 58),
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(17, 34),
@@ -447,119 +447,225 @@ function initMap(){
           map: map,
           icon: image1
         });
-
+// marker 1
 google.maps.event.addDomListener(card1Div, 'mouseover', function(){
 cameraTrapMarker1.setIcon(image2);
-map.panTo({lat: 25.242189, lng: -51.868182});
+map.panTo({lat: -20.220100, lng: 20.201149});
 });
 google.maps.event.addDomListener(card1Div, 'mouseout', function(){
 cameraTrapMarker1.setIcon(image1);
-map.panTo({lat: 25.242189, lng: -51.868182});
+map.panTo({lat: -20.220100, lng: 20.201149});
 });
+// marker 2
 google.maps.event.addDomListener(card2Div, 'mouseover', function(){
 cameraTrapMarker2.setIcon(image2);
-map.panTo({lat: 50.962331, lng: 44.382805});
+map.panTo({lat: 35.878503, lng: 37.656180});
 });
 google.maps.event.addDomListener(card2Div, 'mouseout', function(){
 cameraTrapMarker2.setIcon(image1);
-map.panTo({lat: 50.962331, lng: 44.382805});
+map.panTo({lat: 35.878503, lng: 37.656180});
 });
+// marker 3
 google.maps.event.addDomListener(card3Div, 'mouseover', function(){
-cameraTrapMarker3.setIcon(image2);
-map.panTo({lat: 25.242189, lng: -51.868182});
+    if (getCookie(name)==null){
+        cameraTrapMarker3.setIcon(image4);
+        map.panTo({lat: 13.550485, lng: 0.145785});
+    }else{
+        cameraTrapMarker3.setIcon(image2);
+        map.panTo({lat: 13.550485, lng: 0.145785});
+    }
 });
 google.maps.event.addDomListener(card3Div, 'mouseout', function(){
-cameraTrapMarker3.setIcon(image1);
-map.panTo({lat: 25.242189, lng: -51.868182});
+    if (getCookie(name)==null){
+        cameraTrapMarker3.setIcon(image3);
+        map.panTo({lat: 13.550485, lng: 0.145785});
+    }else{
+        cameraTrapMarker3.setIcon(image1);
+        map.panTo({lat: 13.550485, lng: 0.145785});
+    }
 });
+// marker 4
 google.maps.event.addDomListener(card4Div, 'mouseover', function(){
-cameraTrapMarker4.setIcon(image2);
-map.panTo({lat: 10.670097, lng: -138.394789});
+    if (getCookie(name)==null){
+        cameraTrapMarker4.setIcon(image4);
+        map.panTo({lat: 53.838983, lng: -137.196719});
+    }else{
+        cameraTrapMarker4.setIcon(image2);
+        map.panTo({lat: 53.838983, lng: -137.196719});
+    }
 });
 google.maps.event.addDomListener(card4Div, 'mouseout', function(){
-cameraTrapMarker4.setIcon(image1);
-map.panTo({lat: 10.670097, lng: -138.394789});
+    if (getCookie(name)==null){
+        cameraTrapMarker4.setIcon(image3);
+        map.panTo({lat: 53.838983, lng: -137.196719});
+    }else{
+        cameraTrapMarker4.setIcon(image1);
+        map.panTo({lat: 53.838983, lng: -137.196719});
+    }
 });
+// marker 5
 google.maps.event.addDomListener(card5Div, 'mouseover', function(){
-cameraTrapMarker5.setIcon(image2);
-map.panTo({lat: 10.670097, lng: -138.394789});
+    if (getCookie(name)==null){
+        cameraTrapMarker5.setIcon(image4);
+        map.panTo({lat: -1.527998, lng: -108.149998});
+     }else{
+        cameraTrapMarker5.setIcon(image2);
+        map.panTo({lat: -1.527998, lng: -108.149998});
+     }   
 });
 google.maps.event.addDomListener(card5Div, 'mouseout', function(){
-cameraTrapMarker5.setIcon(image1);
-map.panTo({lat: 10.670097, lng: -138.394789});
+    if (getCookie(name)==null){
+        cameraTrapMarker5.setIcon(image3);
+        map.panTo({lat: -1.527998, lng: -108.149998});
+    }else{
+        cameraTrapMarker5.setIcon(image1);
+        map.panTo({lat: -1.527998, lng: -108.149998});
+    }
 });
+// marker 6
 google.maps.event.addDomListener(card6Div, 'mouseover', function(){
-cameraTrapMarker6.setIcon(image2);
-map.panTo({lat: 25.242189, lng: -51.868182});
+    if (getCookie(name)==null){
+        cameraTrapMarker6.setIcon(image4);
+        map.panTo({lat: 0.495343, lng: 7.884267});
+    }else{
+        cameraTrapMarker6.setIcon(image2);
+        map.panTo({lat: 0.495343, lng: 7.884267});
+    }
 });
 google.maps.event.addDomListener(card6Div, 'mouseout', function(){
-cameraTrapMarker6.setIcon(image1);
-map.panTo({lat: 25.242189, lng: -51.868182});
-});
+    if (getCookie(name)==null){
+        cameraTrapMarker6.setIcon(image3);
+        map.panTo({lat: 0.495343, lng: 7.884267});
+    }else{
+        cameraTrapMarker6.setIcon(image1);
+        map.panTo({lat: 0.495343, lng: 7.884267});
+    }
+})
+// marker 7
 google.maps.event.addDomListener(card7Div, 'mouseover', function(){
-cameraTrapMarker7.setIcon(image2);
-map.panTo({lat: 50.962331, lng: 44.382805});
+    if (getCookie(name)==null){
+        cameraTrapMarker7.setIcon(image4);
+        map.panTo({lat: 22.971800, lng: 49.261098});
+    }else{
+        cameraTrapMarker7.setIcon(image2);
+        map.panTo({lat: 22.971800, lng: 49.261098});
+    }
 });
 google.maps.event.addDomListener(card7Div, 'mouseout', function(){
-cameraTrapMarker7.setIcon(image1);
-map.panTo({lat: 50.962331, lng: 44.382805});
+    if (getCookie(name)==null){
+        cameraTrapMarker7.setIcon(image3);
+        map.panTo({lat: 22.971800, lng: 49.261098});
+    }else{
+        cameraTrapMarker7.setIcon(image1);
+        map.panTo({lat: 22.971800, lng: 49.261098});
+    }
 });
+// marker 8
 google.maps.event.addDomListener(card8Div, 'mouseover', function(){
-cameraTrapMarker8.setIcon(image2);
-map.panTo({lat: 50.962331, lng: 44.382805});
+    if (getCookie(name)==null){
+        cameraTrapMarker8.setIcon(image4);
+        map.panTo({lat: 22.233604, lng: 72.217219});
+    }else{
+        cameraTrapMarker8.setIcon(image2);
+        map.panTo({lat: 22.233604, lng: 72.217219});
+    }
 });
 google.maps.event.addDomListener(card8Div, 'mouseout', function(){
-cameraTrapMarker8.setIcon(image1);
-map.panTo({lat: 50.962331, lng: 44.382805});
+    if (getCookie(name)==null){
+        cameraTrapMarker8.setIcon(image3);
+        map.panTo({lat: 22.233604, lng: 72.217219});
+    }else{
+        cameraTrapMarker8.setIcon(image1);
+        map.panTo({lat: 22.233604, lng: 72.217219});
+    }
 });
+// marker 9
 google.maps.event.addDomListener(card9Div, 'mouseover', function(){
-cameraTrapMarker9.setIcon(image2);
-map.panTo({lat: 50.962331, lng: 44.382805});
+    if (getCookie(name)==null){
+        cameraTrapMarker9.setIcon(image4);
+        map.panTo({lat: 22.291126, lng: 65.958744});
+    }else{
+        cameraTrapMarker9.setIcon(image2);
+        map.panTo({lat: 22.291126, lng: 65.958744});
+    }
 });
 google.maps.event.addDomListener(card9Div, 'mouseout', function(){
-cameraTrapMarker9.setIcon(image1);
-map.panTo({lat: 50.962331, lng: 44.382805});
+    if (getCookie(name)==null){
+        cameraTrapMarker9.setIcon(image3);
+        map.panTo({lat: 22.291126, lng: 65.958744});
+    }else{
+        cameraTrapMarker9.setIcon(image1);
+        map.panTo({lat: 22.291126, lng: 65.958744});
+    }
 });
+// marker 10
 google.maps.event.addDomListener(card10Div, 'mouseover', function(){
-cameraTrapMarker10.setIcon(image2);
-map.panTo({lat: 25.242189, lng: -51.868182});
+    if (getCookie(name)==null){
+        cameraTrapMarker10.setIcon(image4);
+        map.panTo({lat: 9.549046, lng: -28.667044});
+    }else{
+        cameraTrapMarker10.setIcon(image2);
+        map.panTo({lat: 9.549046, lng: -28.667044});
+    }
 });
 google.maps.event.addDomListener(card10Div, 'mouseout', function(){
-cameraTrapMarker10.setIcon(image1);
-map.panTo({lat: 25.242189, lng: -51.868182});
+    if (getCookie(name)==null){
+        cameraTrapMarker10.setIcon(image3);
+        map.panTo({lat: 9.549046, lng: -28.667044});
+    }else{
+        cameraTrapMarker10.setIcon(image1);
+        map.panTo({lat: 9.549046, lng: -28.667044});
+    }
 });
+// marker 11
 google.maps.event.addDomListener(card11Div, 'mouseover', function(){
-cameraTrapMarker11.setIcon(image2);
-map.panTo({lat: 25.242189, lng: -51.868182});
+    if (getCookie(name)==null){
+        cameraTrapMarker11.setIcon(image4);
+        map.panTo({lat: 9.549046, lng: -28.667044});
+    }else{
+        cameraTrapMarker11.setIcon(image2);
+        map.panTo({lat: 9.549046, lng: -28.667044});
+    }
 });
 google.maps.event.addDomListener(card11Div, 'mouseout', function(){
-cameraTrapMarker11.setIcon(image1);
-map.panTo({lat: 25.242189, lng: -51.868182});
+    if (getCookie(name)==null){
+        cameraTrapMarker11.setIcon(image3);
+        map.panTo({lat: 9.549046, lng: -28.667044});
+    }else{
+        cameraTrapMarker11.setIcon(image1);
+        map.panTo({lat: 9.549046, lng: -28.667044});
+    }
 });
+// marker 12
 google.maps.event.addDomListener(card12Div, 'mouseover', function(){
-cameraTrapMarker12.setIcon(image2);
-map.panTo({lat: 25.242189, lng: -51.868182});
+    if (getCookie(name)==null){
+        cameraTrapMarker12.setIcon(image4);
+        map.panTo({lat: -3.018744, lng: -11.931882});
+    }else{
+        cameraTrapMarker12.setIcon(image2);
+        map.panTo({lat: -3.018744, lng: -11.931882});
+    }
 });
 google.maps.event.addDomListener(card12Div, 'mouseout', function(){
-cameraTrapMarker12.setIcon(image1);
-map.panTo({lat: 25.242189, lng: -51.868182});
+    if (getCookie(name)==null){
+        cameraTrapMarker12.setIcon(image3);
+        map.panTo({lat: -3.018744, lng: -11.931882});
+    }else{
+        cameraTrapMarker12.setIcon(image1);
+        map.panTo({lat: -3.018744, lng: -11.931882});
+    }
+
 });
 }
-
 // end map
 // email form 
-
 $(function(){       
     $("#email-submit").on("click",function(e){
         e.preventDefault();
         var errorBlock = $("#error");
         var email = $("#cons_email").val();
         getCookie(name);
-<<<<<<< HEAD
         var surveyID = $("#surveyID").val();
-=======
-        // var surveyID = $("#surveyID").val();
->>>>>>> 698f99e655f1200f8426c06d399395010e9abb77
        
             if (!isValidEmail(email)) {
                 errorBlock.html("Please enter a Valid email address to continue");
@@ -572,13 +678,10 @@ $(function(){
                       url: url
                     })
                     .always(function(){
-                        
-                        
                });
             }  
         });
-    });
-       
+    });    
     function isValidEmail(str) {
         var filter=/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
         if (filter.test(str)) {
@@ -595,19 +698,9 @@ $(function(){
             }
         }
 // if email is valid set cookie
-
-
-
 function setCookie(){
 document.cookie = "email=visitoremail; expires=Wed, 18 Dec 2023 12:00:00 GMT; path=/";
-// displayCookies();
 }
-// function displayCookies() {
-// var mail=getCookie("email");
-// if (mail==null) {mail="";}
-// if (mail!="") {mail="email="+mail;}
-// // alert (mail);
-// }
 function getCookie(name) {
 var nameEQ = name + "=";
 var ca = document.cookie.split(';');
@@ -618,7 +711,6 @@ if (c.indexOf(nameEQ) != -1) return c.substring(nameEQ.length,c.length);
 }
 return null;
 }
-console.log(getCookie(name));
 
 // // lightbox 
 $(document).ready(function(){
@@ -647,6 +739,7 @@ close_box_locked();
 document.getElementById('error').innerHTML = "";
 });
 } else{
+    $('.overlay-locked, #unlock-photos-banner').css('display', 'none'); 
     $('.backdrop').click(function(){
 close_box();
 });
@@ -674,15 +767,10 @@ function currentSlide(n) {
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlidesUnlocked");
-  // var dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1} 
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none"; 
   }
-  // for (i = 0; i < dots.length; i++) {
-  //     dots[i].className = dots[i].className.replace(" active", "");
-  // }
   slides[slideIndex-1].style.display = "block"; 
-  // dots[slideIndex-1].className += " active";
 }

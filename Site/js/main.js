@@ -656,6 +656,42 @@ google.maps.event.addDomListener(card12Div, 'mouseout', function(){
     }
 
 });
+google.maps.event.addListener(cameraTrapMarker1,'click', function(){
+    window.location.href = '#card01';
+});
+google.maps.event.addListener(cameraTrapMarker2,'click', function(){
+    window.location.href = '#card02';
+});
+google.maps.event.addListener(cameraTrapMarker3,'click', function(){
+    window.location.href = '#card03';
+});
+google.maps.event.addListener(cameraTrapMarker4,'click', function(){
+    window.location.href = '#card04';
+});
+google.maps.event.addListener(cameraTrapMarker5,'click', function(){
+    window.location.href = '#card05';
+});
+google.maps.event.addListener(cameraTrapMarker6,'click', function(){
+    window.location.href = '#card06';
+});
+google.maps.event.addListener(cameraTrapMarker7,'click', function(){
+    window.location.href = '#card07';
+});
+google.maps.event.addListener(cameraTrapMarker8,'click', function(){
+    window.location.href = '#card08';
+});
+google.maps.event.addListener(cameraTrapMarker9,'click', function(){
+    window.location.href = '#card09';
+});
+google.maps.event.addListener(cameraTrapMarker10,'click', function(){
+    window.location.href = '#card10';
+});
+google.maps.event.addListener(cameraTrapMarker11,'click', function(){
+    window.location.href = '#card11';
+});
+google.maps.event.addListener(cameraTrapMarker12,'click', function(){
+    window.location.href = '#card12';
+});
 }
 // end map
 // email form 

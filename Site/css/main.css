@@ -109,6 +109,9 @@ html, body {
    
 }
 .content-cards:nth-child(n+1) .overlay-locked .overlay-text{
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-weight: bolder;
     position: absolute;
     z-index: 150;
     text-align: center;

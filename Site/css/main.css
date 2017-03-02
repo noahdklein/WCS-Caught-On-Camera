@@ -116,7 +116,7 @@ html, body {
     z-index: 150;
     text-align: center;
     width: 100%;
-    top: 20%;
+    top: 28%;
 }
 .content-cards:nth-child(n+1) .overlay-locked img{
   width: 100%;
